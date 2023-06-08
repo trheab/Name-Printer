@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Scheels Project</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="wrapper">
+            <button class="expand-button" onclick="expandContainerAndOpenModal()">START</button>
+            <section class="container" id="container">
+                <div class="button-group">
+                    <button class="run-button" onclick="run()">Run</button>
+                    <button class="reset-button" onclick="reset()">Reset</button>
+                    <button class="hamburger" onclick="toggleOptions()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+                <div class="options">
+                    <div class="option">
+                        <label for="field1">Text For Multiples of 3: </label>
+                        <input type="text" id="field1">
+                        <button class="apply-button" onclick="applyCustomText('field1')">Apply</button>
+                    </div>
+                    <div class="option">
+                        <label for="field2">Text For Multiples of 5: </label>
+                        <input type="text" id="field2">
+                        <button class="apply-button" onclick="applyCustomText('field2')">Apply</button>
+                    </div>
+                    <div class="option">
+                        <label for="field3">Minimum Range: </label>
+                        <input type="number" id="field3" onchange="setMinLines(this.value)">
+                    </div>
+                    <div class="option">
+                        <label for="field4">Maximum Range: </label>
+                        <input type="number" id="field4" onchange="setMaxLines(this.value)">
+                    </div>
+                    <div class="option">
+                        <button class="faq-button" onclick="openModal()">FAQ</button>
+                    </div>
+                </div>
+
+                <div class="output-container" id="outputContainer"></div>
+            </section>
+        </div>
+        <div class="modal show" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h1 class="text-left">Hello!</h1>
+                  <h2 class="text-left"> This is my official project for Scheels.</h2>
+                  <h2 class="text-left"> <u>How To Use</u></h2>
+                  <h5 class="text-left"> Press the "Run" button to show the default output printed in multiples of three and five 100 times</h5>
+                  <h5 class="text-left"> Press the "Reset" button to clear the output</h5>
+                  <h5 class="text-left"> The '≡' icon displays these options:</h5>
+                    <ul class="text-left">
+                        <li>custom input for multiples of 3</li>
+                        <li>custom input for multiples of 5</li>
+                        <li>minimum range printed</li>
+                        <li>maximum range printed</li>
+                    </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
