@@ -27,7 +27,7 @@ hamburger.addEventListener("click", () => {
 
 function run() {
   var output = "";
-  var option1 = document.getElementById("field1").value || "Scheels";
+  var option1 = document.getElementById("field1").value || "Company";
   var option2 = document.getElementById("field2").value || ".com";
 
   for (var i = minLines; i <= maxLines; i++) {
